@@ -84,26 +84,21 @@ func Info() ([]InfoStat, error) {
 	q := wmi.CreateQuery(&dst, "")
 	err := wmi.Query(q, &dst)
 	if err != nil {
-		return ret, err
+		log.Println(err.Error())
+		//return ret, err
 	}
 
 	var procID string
-	var family string
 	for i, l := range dst {
 		procID = ""
-		family = ""
+
 		if l.ProcessorID != nil {
 			procID = *l.ProcessorID
 		}
 
-		log.Println(l.Family)
-		if reflect.TypeOf(l.Family).Kind() == reflect.Uint16 {
-			family = fmt.Sprintf("%d", l.Family)
-		}
-
 		cpu := InfoStat{
 			CPU:        int32(i),
-			Family:     family,
+			Family:     fmt.Sprintf("%d", l.Family),
 			VendorID:   l.Manufacturer,
 			ModelName:  l.Name,
 			Cores:      int32(l.NumberOfLogicalProcessors),
