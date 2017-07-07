@@ -4,6 +4,7 @@ package cpu
 
 import (
 	"fmt"
+	"log"
 	"reflect"
 	"unsafe"
 
@@ -87,14 +88,15 @@ func Info() ([]InfoStat, error) {
 	}
 
 	var procID string
-	var family uint16
+	var family string
 	for i, l := range dst {
 		procID = ""
-		family = 0
+		family = ""
 		if l.ProcessorID != nil {
 			procID = *l.ProcessorID
 		}
 
+		log.Println(l.Family)
 		if reflect.TypeOf(l.Family).Kind() == reflect.Uint16 {
 			family = fmt.Sprintf("%d", l.Family)
 		}
