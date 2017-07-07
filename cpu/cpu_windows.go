@@ -87,10 +87,10 @@ func Info() ([]InfoStat, error) {
 	}
 
 	var procID string
-	var family string
+	var family uint16
 	for i, l := range dst {
 		procID = ""
-		family = ""
+		family = 0
 		if l.ProcessorID != nil {
 			procID = *l.ProcessorID
 		}
