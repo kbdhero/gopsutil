@@ -3,8 +3,8 @@
 package cpu
 
 import (
-	"family"
 	"fmt"
+	"reflect"
 	"unsafe"
 
 	"github.com/StackExchange/wmi"
