@@ -5,7 +5,6 @@ package cpu
 import (
 	"fmt"
 	"log"
-	"reflect"
 	"unsafe"
 
 	"github.com/StackExchange/wmi"
