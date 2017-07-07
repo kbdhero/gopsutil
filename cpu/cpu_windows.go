@@ -84,6 +84,7 @@ func Info() ([]InfoStat, error) {
 	err := wmi.Query(q, &dst)
 	if err != nil {
 		log.Println(err.Error())
+		log.Println("Contuining...")
 		//return ret, err
 	}
 
