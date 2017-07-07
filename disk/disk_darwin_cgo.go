@@ -31,7 +31,7 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/shirou/gopsutil/internal/common"
+	"github.com/kbdhero/gopsutil/internal/common"
 )
 
 func IOCounters(names ...string) (map[string]IOCountersStat, error) {

@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/shirou/gopsutil/internal/common"
+	"github.com/kbdhero/gopsutil/internal/common"
 )
 
 func IOCounters(pernic bool) ([]IOCountersStat, error) {

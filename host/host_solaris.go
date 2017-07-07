@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/shirou/gopsutil/internal/common"
+	"github.com/kbdhero/gopsutil/internal/common"
 )
 
 func Info() (*InfoStat, error) {

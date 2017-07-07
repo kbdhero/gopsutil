@@ -5,7 +5,7 @@ package mem
 import (
 	"unsafe"
 
-	"github.com/shirou/gopsutil/internal/common"
+	"github.com/kbdhero/gopsutil/internal/common"
 	"golang.org/x/sys/windows"
 )
 

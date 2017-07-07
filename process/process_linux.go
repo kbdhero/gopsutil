@@ -15,10 +15,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/shirou/gopsutil/cpu"
-	"github.com/shirou/gopsutil/host"
-	"github.com/shirou/gopsutil/internal/common"
-	"github.com/shirou/gopsutil/net"
+	"github.com/kbdhero/gopsutil/cpu"
+	"github.com/kbdhero/gopsutil/host"
+	"github.com/kbdhero/gopsutil/internal/common"
+	"github.com/kbdhero/gopsutil/net"
 	"golang.org/x/sys/unix"
 )
 

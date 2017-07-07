@@ -3,7 +3,7 @@
 package cpu
 
 import (
-	"github.com/shirou/gopsutil/internal/common"
+	"github.com/kbdhero/gopsutil/internal/common"
 )
 
 func Times(percpu bool) ([]TimesStat, error) {
